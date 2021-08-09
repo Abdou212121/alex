@@ -3,10 +3,19 @@
 
 import cv2 as cv
 import numpy as np
-from matplotlib import pyplot as plt
+import os
 
-fileNameMain = 'where.jpg'
-fileNameFind = 'wally.jpg'
+
+fileNameMain = input("enter your main image")
+
+assert os.path.exists(fileNameMain), "I did not find the file at, "+str(fileNameMain)
+
+
+fileNameFind = input("enter the image you looking for")
+
+assert os.path.exists(fileNameFind), "I did not find the file at, "+str(fileNameFind)
+
+
 RED = (0,0,255)
 fileNameOut = 'ouput.png'
 
